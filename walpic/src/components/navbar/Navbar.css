@@ -1,0 +1,108 @@
+/* Navigation bar animation */
+nav {
+    background-color: #0d5267;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    animation: slideDown 0.6s ease-in-out;
+}
+
+/* Footer animation */
+.footer {
+    background-color: #0d5267;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Dark mode background transitions */
+.black {
+    background-color: #000 !important;
+    color: #fff !important;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.grey {
+    background-color: #333 !important;
+    color: #fff !important;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Logo animation */
+.logo {
+    font-size: 25px;
+    letter-spacing: 2px;
+    animation: logoBounce 1s ease-in-out infinite;
+}
+
+/* Dark Mode Toggle animations */
+.darkModeToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #919bc2a7;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark, .light {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #0d2067be;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode slide animation */
+.darkMode {
+    left: 50%;
+    right: 0;
+}
+
+/* Slide-down animation for the navigation bar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation for the footer */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Logo bounce animation */
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
